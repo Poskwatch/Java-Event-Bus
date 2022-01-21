@@ -21,10 +21,8 @@ public class ListenerRegistrationTest {
         final long preBenchmarkTimestamp = System.currentTimeMillis();
 
         for (int i = 1_000_000; i > 0; --i) {
-
             this.eventBus.registerListener(eventListener);
             this.eventBus.unregisterListener(eventListener);
-            
         }
 
         final long postBenchmarkTimestamp = System.currentTimeMillis();
